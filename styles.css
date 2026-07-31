@@ -1,0 +1,181 @@
+/**
+ * Activity Navigation plugin styles.
+ * Compact top-right navigation arrows.
+ *
+ * @package    local_activitynav
+ * @copyright  2025 Essay Grader AI
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Top-right positioned container */
+.activitynav-topright {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+    padding: 0 0 0.875rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .activitynav-topright {
+        border-bottom-color: #334155;
+    }
+}
+
+.activitynav-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activitynav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Compact navigation buttons */
+.activitynav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.875rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: #475569;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.activitynav-btn:hover {
+    background: #ffffff;
+    border-color: #3b82f6;
+    color: #1e40af;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
+    text-decoration: none !important;
+}
+
+.activitynav-prev {
+    padding-left: 0.625rem;
+}
+
+.activitynav-next {
+    padding-right: 0.625rem;
+}
+
+/* Hide back to course in top-right mode - too cluttered */
+.activitynav-course {
+    display: none;
+}
+
+/* Spacer hidden in compact mode */
+.activitynav-spacer {
+    display: none;
+}
+
+/* Compact icon */
+.activitynav-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Hide verbose labels in compact mode - just show direction */
+.activitynav-label {
+    display: flex;
+    align-items: center;
+}
+
+.activitynav-direction {
+    font-size: 0.8125rem;
+    font-weight: 500;
+}
+
+/* Hide activity name in compact mode */
+.activitynav-name {
+    display: none;
+}
+
+/* Locked state (completion not met) */
+.activitynav-locked {
+    background: #fef3c7;
+    border-color: #fbbf24;
+    color: #92400e;
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.activitynav-locked:hover {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    box-shadow: none;
+    color: #92400e;
+}
+
+.activitynav-locked .activitynav-icon,
+.activitynav-lock {
+    color: #b45309;
+}
+
+.activitynav-locked-text {
+    display: inline;
+    font-size: 0.75rem;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .activitynav-btn {
+        background: #1e293b;
+        border-color: #334155;
+        color: #cbd5e1;
+    }
+
+    .activitynav-btn:hover {
+        background: #334155;
+        border-color: #3b82f6;
+        color: #93c5fd;
+    }
+
+    .activitynav-locked {
+        background: #451a03;
+        border-color: #b45309;
+        color: #fcd34d;
+    }
+
+    .activitynav-locked:hover {
+        background: #451a03;
+        border-color: #d97706;
+    }
+
+    .activitynav-locked .activitynav-icon,
+    .activitynav-lock {
+        color: #fbbf24;
+    }
+
+    .activitynav-locked-text {
+        color: #fcd34d;
+    }
+}
+
+/* Responsive - even more compact on mobile */
+@media (max-width: 480px) {
+    .activitynav-btn {
+        padding: 0.375rem 0.5rem;
+    }
+
+    .activitynav-direction {
+        display: none;
+    }
+
+    .activitynav-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
