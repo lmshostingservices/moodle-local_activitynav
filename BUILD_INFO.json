@@ -1,9 +1,9 @@
 {
   "component": "local_activitynav",
-  "version": "1.4.10",
-  "numeric_version": "2026041100150",
-  "build_id": "e665fabe8e3c7e16",
-  "build_timestamp": "2026-04-11T00:00:00.000Z",
+  "version": "1.5.3",
+  "numeric_version": "2026061500",
+  "build_id": "86431c1f67171a34",
+  "build_timestamp": "2026-08-11T00:00:00.000Z",
   "folder": "local_activitynav",
-  "verification": "zip-structure-fix-v1.4.10"
+  "verification": "10digit-migration-1.5.3"
 }
