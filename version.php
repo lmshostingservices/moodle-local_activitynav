@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_activitynav';
-$plugin->version   = 2026061500004;  // 2026-06-15, v1.5.0
+$plugin->version   = 2026061500;  // 2026-06-15, v1.5.0
 $plugin->requires  = 2022041900;
 $plugin->supported  = [400, 500];  // Moodle 4.0 to 5.x
 $plugin->maturity  = MATURITY_STABLE;
