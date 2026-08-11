@@ -124,7 +124,7 @@ function local_activitynav_inject_navigation() {
     // Inject JavaScript that reads the course index DOM for navigation.
     // This approach works reliably with subsections, Tiles, and phased courses.
     $PAGE->requires->js_amd_inline("
-        require(['jquery'], function($) {
+        require(['jquery'], function ($) {
             'use strict';
             
             /**
@@ -540,7 +540,7 @@ function local_activitynav_inject_navigation() {
                 }
                 
                 // Watch for any click on completion-related elements.
-                $(document).on('click', '[data-action=\"toggle-manual-completion\"], .togglecompletion, .activity-manual-completion, .btn-completion, button[type=\"submit\"]', function() {
+                $(document).on('click', '[data-action=\"toggle-manual-completion\"], .togglecompletion, .activity-manual-completion, .btn-completion, button[type=\"submit\"]', function () {
                     // Check multiple times after click to catch AJAX updates.
                     setTimeout(tryUnlock, 300);
                     setTimeout(tryUnlock, 700);
@@ -549,7 +549,7 @@ function local_activitynav_inject_navigation() {
                 });
                 
                 // Watch entire document body for mutations (catches all AJAX updates).
-                var bodyObserver = new MutationObserver(function() {
+                var bodyObserver = new MutationObserver(function () {
                     tryUnlock();
                 });
                 
@@ -562,7 +562,7 @@ function local_activitynav_inject_navigation() {
                 
                 // Also poll periodically as fallback.
                 var pollCount = 0;
-                var pollInterval = setInterval(function() {
+                var pollInterval = setInterval(function () {
                     tryUnlock();
                     pollCount++;
                     if (unlocked || pollCount > 60) { // Stop after 60 seconds.
@@ -591,16 +591,16 @@ function local_activitynav_inject_navigation() {
                     watchForCompletion();
                 } else {
                     // Wait for course index to load (handles dynamic loading in Tiles/subsections).
-                    setTimeout(function() {
+                    setTimeout(function () {
                         initWithRetry(attempts - 1);
                     }, 200);
                 }
             }
             
             // Initialize when DOM is ready.
-            $(document).ready(function() {
+            $(document).ready(function () {
                 // Give the course index time to load (especially for Tiles/subsections).
-                setTimeout(function() {
+                setTimeout(function () {
                     initWithRetry(10); // Try up to 10 times (2 seconds total).
                 }, 100);
             });
