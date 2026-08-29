@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_activitynav';
-$plugin->version   = 2026061500;  // 2026-06-15, v1.5.0
+$plugin->version   = 2026082901;  // 2026-06-15, v1.5.0
 $plugin->requires  = 2022041900;
 $plugin->supported  = [400, 500];  // Moodle 4.0 to 5.x
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.5.3';
+$plugin->release   = '1.5.4'; // RELEASE RECOVERY: Republished the reviewed authoritative source under a new immutable tag because the historical tag contained a different source tree. No functional changes.
 // v1.5.0: UX — reduce confusion between plugin nav and in-activity navigation (e.g. Book chapters).
 // Two changes:
 // 1. Button labels changed from "Previous"/"Next" to "Previous activity"/"Next activity" — unambiguous

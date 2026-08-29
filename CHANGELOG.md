@@ -1,3 +1,8 @@
+## [v1.5.4] - 2026-08-29
+
+### Changed
+- RELEASE RECOVERY: Republished the reviewed authoritative source under a new immutable tag because the historical tag contained a different source tree. No functional changes.
+
 ## [v1.4.5] - 2025-12-23
 
 ### Security
